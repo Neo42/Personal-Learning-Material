@@ -1,3 +1,5 @@
+//MODE: ObjReferred.functionTarget.call/apply/bind(objTarget, parameter/paraArrey/dataPassed)
+
 //Use call method to fire a tomahawk missle
 let canon = { tomahawk: 'Boom!' };
 let fire = function(fuel){
