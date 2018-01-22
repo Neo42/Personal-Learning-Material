@@ -1,7 +1,7 @@
 let a = false;
 
-/*if a is truthy, print yes
-falsy, print false.*/
+/*if a is true(not if false, due to a is false), print true
+false, print false.*/
 
 if (a) {
 console.log('yes');
