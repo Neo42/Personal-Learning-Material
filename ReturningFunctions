@@ -1,4 +1,4 @@
-//capturing(pull out variable from)
+//capturing (pulling in variable from outside of the scope)
 let show = () => {
     let x = 1
     return () => console.log(x)
@@ -14,16 +14,16 @@ let counter = {
 }*/
 counter.count = 9000; SHIT!
 
-//A funtional counter with private variables
-let createCounter = () =>{
-let count = 0
+//A solid, flexible funtional counter with private variables
+let createCounter = i => {
 return {
-	increment:()=>count+=1,
-  currentValue:()=>count
-  }
+	//Using the passed-in argument to set the initial value.
+	increment:() => i += 1,
+	currentValue:() => i
+	}
 }
 
-let myCounter = createCounter()
-myCounter.increment()
-console.log(myCounter.currentValue())//1
-myCounter.count = 9000//myCounter does not have a property called "count". AND BOO YA!
+let myCounterStartsAt5 = createCounter(5)
+myCounterStartsAt5.increment()
+console.log(myCounterStartsAt5.currentValue())//1
+myCounterStartsAt5.count = 9000//myCounterStartsAt5 does not have a property called "count". AND BOO YA!
