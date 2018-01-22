@@ -1,0 +1,10 @@
+let a = false;
+
+/*if a is truthy, print yes
+falsy, print false.*/
+
+if (a) {
+console.log('yes');
+}else{
+console.log('false');
+}//false
