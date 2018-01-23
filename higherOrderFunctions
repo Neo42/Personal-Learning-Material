@@ -1,6 +1,6 @@
 /*PATTERN: 
 SourceArrey.forEach/filter/some/every/map/sort((arreyItem)=>{return criteria})
-SoureArrey.reduce((resultVariable,arreyItem) => resultValue operator arreyItem.value, initialValue)*/
+SoureArrey.reduce((resultVariable,arreyItem, indexOfItem) => resultValue operator arreyItem.value, initialValue)*/
 
 const companies= [
   {name: "Company One", category: "Finance", start: 1981, end: 2004},
