@@ -1,5 +1,5 @@
 /*PATTERN: 
-SourceArrey.forEach/filter/some/every/map/sort((arreyItem)=> criteria)
+SourceArrey.forEach/filter/some/every/map/sort((arreyItem)=> criteria/operations)
 SoureArrey.reduce((resultVariable,arreyItem, indexOfItem) => resultValue operator arreyItem.value, initialValue)*/
 
 const companies= [
