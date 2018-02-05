@@ -34,4 +34,27 @@ Array.prototype.bubblesort = function() {
 ```
 
 ### Insertion Sort<br>
->Insertion sort is kinda similar to bubble sort. It walks through the whole arrey, swap the element out of order, but after every swap, it doesn't stop, instead it will keep compare that swapped relatively smaller number to its left neighbor, and if they are still out of order, it swaps them again and goes on and on.
+>Insertion sort is kinda similar to bubble sort. It walks through the whole arrey, swap the element out of order, but after every swap, it doesn't stop, instead it will keep compare that swapped relatively smaller number to its left neighbor, and if they are still out of order, it swaps them again and goes on and on.<br><br>And from my point of view, compared to bubble sort, insertion sort is unique because of its backward comparing loop. It feels like a sliding board letting small elements descend all the way down instead of jamming in there. It uses computing resourse more effeciently.
+```js
+let insertionSort = nums => {
+  for (var j = 0; j < nums.length; j++) {
+    //Walk the arrey through for N times.
+    for (var i = 1; i < nums.length + 1; i++) {
+      //Walk through all N elements of the arrey.
+      let x;
+      let swap = nums => {
+        if (nums[i] < nums[i - 1]) {
+          x = nums[i]; //Put a variable as a value container while exchanging.
+          nums[i] = nums[i - 1];
+          nums[i - 1] = x;
+          i -= 1;
+          swap(nums);//Using recursion to implement the backward comparing loop.
+        } else {
+          return;
+        }
+      };
+      swap(nums); 
+    }
+  }
+};
+```
