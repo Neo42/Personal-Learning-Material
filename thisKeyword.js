@@ -35,3 +35,10 @@ dog.strech();//"paw"
 })();//window. 
 
 //function can't be this. Only object or undefined.
+
+/*-----------------------------------------------------------*/
+
+1. Called with a now?
+2. Called with call or apply?
+3. Called via a containing/owning object(context)?
+4. Default: global/undefined
