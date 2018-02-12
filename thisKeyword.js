@@ -1,23 +1,37 @@
-var 人 = {
-    伸手: function() {
-      console.log(this.手)
+var human = {
+    strech: function() {
+      console.log(this.hand)
     },
 
-    手: "手"
+    hand: "hand"
 
-  } //人有手，伸出的是人手
+  }
 
 
-var 狗 = {
+var dog = {
 
-    手: "爪子"
+    hand: "paw"
 
-  } //狗有爪子
+  } 
 
-狗.伸手 = 人.伸手; //狗跟人学了伸手
+dog.strech = human.strech;
 
-console.log(狗); //狗变了！🔥
+console.log(dog);
 
-狗.伸手(); //"爪子"
+dog.strech();//"paw" 
 
-//关键在于动作是谁的什么部位做出的
+//The key is who streches.
+
+/*---------------------------------------------------------*/
+
+(function() {
+  (function() {
+    (function() {
+      (function() {
+        console.log(this);
+      })();
+    })();
+  })();
+})();//window. 
+
+//function can't be this. Only object or undefined.
