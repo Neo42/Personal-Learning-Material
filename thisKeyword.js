@@ -31,7 +31,12 @@ dog.strech(); //"paw"
 
 /* ----------------------------------------------------------- */
 
-/* 1. Called with a now?
+/* 1. Called with a new?
 2. Called with call or apply?
 3. Called via a containing/owning object(context)?
 4. Default: global/undefined */
+
+/*
+1. In the global execution context, this refers to the global object.
+2.If a function is called as a method of an object, this in the function is bond to that object that object.
+*/
